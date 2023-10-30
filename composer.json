@@ -12,14 +12,14 @@
         }
     ],
     "require": {
-        "php": "^7.1",
-        "php-xapi/exception": "^0.2.0",
-        "php-xapi/json-test-fixtures": "^2.0",
-        "php-xapi/model": "^1.2 || ^2.2 || ^3.1",
-        "php-xapi/test-fixtures": "^1.0.1"
+        "php": "^7.4 || ^8.0",
+        "php-xapi/exception": "^v1.0",
+        "php-xapi/json-test-fixtures": "^v3.0",
+        "php-xapi/model": "^4.0",
+        "php-xapi/test-fixtures": "^v2.0"
     },
     "require-dev": {
-        "phpspec/phpspec": "^2.4"
+        "phpspec/phpspec": "^7.0"
     },
     "conflict": {
         "xabbuh/xapi-serializer": "*"
@@ -31,9 +31,23 @@
             "Xabbuh\\XApi\\Serializer\\Tests\\": "tests/"
         }
     },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "3.0.x-dev"
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/erickr/php-xapi-exception.git"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/erickr/php-xapi-model.git"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/erickr/php-xapi-json-test-fixtures.git"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/erickr/php-xapi-test-fixtures.git"
         }
-    }
+
+    ]
 }
