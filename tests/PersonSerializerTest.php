@@ -20,7 +20,7 @@ abstract class PersonSerializerTest extends SerializerTest
 {
     private $personSerializer;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->personSerializer = $this->createPersonSerializer();
     }

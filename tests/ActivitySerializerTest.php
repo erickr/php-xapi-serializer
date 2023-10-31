@@ -20,7 +20,7 @@ abstract class ActivitySerializerTest extends SerializerTest
 {
     private $activitySerializer;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->activitySerializer = $this->createActivitySerializer();
     }
