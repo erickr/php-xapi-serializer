@@ -20,7 +20,7 @@ abstract class ActorSerializerTest extends SerializerTest
 {
     private $actorSerializer;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->actorSerializer = $this->createActorSerializer();
     }
@@ -33,6 +33,9 @@ abstract class ActorSerializerTest extends SerializerTest
         $this->assertJsonStringEqualsJsonString($expectedJson, $this->actorSerializer->serializeActor($actor));
     }
 
+    /**
+     * @return array
+     */
     public function serializeData()
     {
         return $this->buildSerializeTestCases('Actor');
@@ -49,6 +52,9 @@ abstract class ActorSerializerTest extends SerializerTest
         $this->assertTrue($expectedActor->equals($actor), 'Deserialized actor has the expected properties');
     }
 
+    /**
+     * @return array
+     */
     public function deserializeData()
     {
         return $this->buildDeserializeTestCases('Actor');
